@@ -1,0 +1,106 @@
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+body {
+  background: #1b1b1b;
+  background-image: url("http://emilyfbrooks.com/images/WelcometotheSwampDigitalBlank-09.jpg");
+  height: 500px;
+  background-repeat:no-repeat;
+  background-position: center;
+top: 250px;
+}
+  
+.labware{
+  display:block;
+  width: 500px;
+  height: 300px;
+  font-size: 160px;
+  margin:10px auto 0;
+  padding-top: 145px;
+  padding-left: 65px;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drawing-area {
+  box-shadow: 0 0 6px 0 #999;
+}
+
+.clear-button {
+  margin: 1em;
+  font-size: 16px;
+}
+
+.orange-button {
+  color:#FA4616;
+  margin: 1em;
+  font-size: 16px;
+}
+
+.blue-button {
+  color:#0021A5;
+  margin: 1em;
+  font-size: 16px;
+}
+
+.svg {
+  position: top;
+}
+
+
+.cls-1 {
+        opacity: 0.7;
+      }
+
+      .cls-2 {
+        animation: cleartoblue 15s linear infinite;} 
+
+@keyframes cleartoblue {
+0% {fill:#e6e7e8;}
+50% {fill:#424c9a;}
+100% {fill:#e6e7e8;}
+}
+
+
+
+      .cls-3 {
+        opacity: 0.5;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 { animation: magentatopurple 15s linear infinite;} 
+
+@keyframes magentatopurple {
+0% {fill: #ec008c;}
+50% {fill:#7f00ec;}
+100% {fill: #ec008c;}
+}
+
+      .cls-6 {animation: redtoyellow 15s linear infinite;} 
+
+@keyframes redtoyellow {
+0% {fill: #be1e2d;}
+50% {fill:#fdff00;}
+100% {fill: #be1e2d;}
+}
+
+
+      .cls-7 {animation: yellowtogreen 15s linear infinite;} 
+
+@keyframes yellowtogreen {
+0% {fill: #d7df23;}
+50% {fill:#00ff38;}
+100% {fill: #d7df23;}
+}
