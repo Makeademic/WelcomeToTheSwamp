@@ -18,11 +18,13 @@ body { background: black; margin: 0; width: 100%; height: 100%; }
   transform-style: preserve-3d;
 }
 .page {
+  z-index: 0;
   cursor: pointer;
   position: absolute;
   color: black;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 
   -webkit-transition: 1.5s -webkit-transform;
 
@@ -38,7 +40,6 @@ body { background: black; margin: 0; width: 100%; height: 100%; }
   position: absolute;
   
   width: 100%;
-  height: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -57,16 +58,38 @@ body { background: black; margin: 0; width: 100%; height: 100%; }
 }
 
 .page.active {
+  z-index: 2;
+  pointer-events: auto;
+}
+.page.active + .page {
   z-index: 1;
 }
 .page.flipped {
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
+  pointer-events: auto;
+  z-index: 3;
 }
-.page.flipped:last-of-type {
-  z-index: 1;
+.page.prevFlipped {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  pointer-events: none;
+  z-index: 2;
+}
+
+img.nolink {
+  margin-bottom: 19px;
+}
+
+a.pagelink {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
 }
 
 p {
   margin: 0;
+}
+.hidden {
+  display: none;
 }
