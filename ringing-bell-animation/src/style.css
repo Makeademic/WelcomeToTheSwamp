@@ -15,12 +15,15 @@ top: 250px;
   margin:5px auto 0;
   padding-top: 145px;
   color: #7b4b47;
+  transform-origin: center top;
+}
+
+.ringing {
   -webkit-animation: ring 40s .7s ease-in-out infinite;
   -webkit-transform-origin: center top;
   -moz-animation: ring 40s .7s ease-in-out infinite;
   -moz-transform-origin: center top;
   animation: ring 40s .7s ease-in-out infinite;
-  transform-origin: center top;
 }
 
 @-webkit-keyframes ring {
