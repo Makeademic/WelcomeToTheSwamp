@@ -1,56 +1,85 @@
-html { height: 100%; overflow: hidden; }
-body { background-image: url("http://emilyfbrooks.com/images/WelcometotheSwampDigital-07.jpg");
+body {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container1 {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 1em;
+  background-image: url("http://emilyfbrooks.com/welcometotheswamp/images/WelcometotheSwampDigital-07.jpg");
   background-repeat: no-repeat;
-  background-position: center; margin: 1 em; width: 100%; height: 100%; top: 250px;}
+  background-position: center;
+}
 
 .scene {
   position: relative;
-  top: 180px;
-  left: 110px;
   width: 198px;
   height: 255px;
-  margin: auto;
+  margin: 16px auto;
   -webkit-perspective: 2000px;
   perspective: 2000px;
 }
 .book {
   position: relative;
+  left: 115px;
   width: 100%;
   height: 100%;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .page {
+  z-index: 0;
   cursor: pointer;
   position: absolute;
   color: black;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 
   -webkit-transition: 1.5s -webkit-transform;
 
   transition: 1.5s transform;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;  
-  -webkit-transform-origin: left center;  
-  -ms-transform-origin: left center;  
+  transform-style: preserve-3d;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
   transform-origin: left center;
 }
 .front,
 .back {
   position: absolute;
-  
+
   width: 100%;
   height: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  
+
   -webkit-backface-visibility: hidden;
-  
+
   backface-visibility: hidden;
-  background: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#FFFFFF), to(#CCCCCC));
-  background: -webkit-gradient(linear, left top, right bottom, from(#fff), to(#ccc));
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    100% 100%,
+    from(#ffffff),
+    to(#cccccc)
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#fff),
+    to(#ccc)
+  );
   background: -webkit-linear-gradient(top left, #fff, #ccc);
   background: linear-gradient(to bottom right, #fff, #ccc);
 }
@@ -60,16 +89,53 @@ body { background-image: url("http://emilyfbrooks.com/images/WelcometotheSwampDi
 }
 
 .page.active {
+  z-index: 2;
+}
+.page.active + .page {
   z-index: 1;
 }
 .page.flipped {
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
+  pointer-events: auto;
+  z-index: 3;
 }
-.page.flipped:last-of-type {
-  z-index: 1;
+.page.prevFlipped {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  pointer-events: none;
+  z-index: 2;
+}
+
+img.nolink {
+  margin-bottom: 19px;
+}
+
+a.pagelink {
+  font-family: "Nunito Sans", sans-serif;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
 }
 
 p {
   margin: 0;
+}
+.hidden {
+  display: none;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.return-button {
+  margin: 1em;
+  font-size: 16px;
+}
+
+button {
+  font-family: "Nunito Sans", sans-serif;
 }
