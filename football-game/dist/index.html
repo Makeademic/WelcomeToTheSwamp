@@ -9,18 +9,29 @@
 <body>
 <!-- partial:index.partial.html -->
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<link rel="stylesheet" type="text/css" href="style.css"></link>
-	</head>
-    <body>
-		<canvas id="canvas" width="700" height="500">Install gentoo</canvas>
-		<div id="out"></div>
-		<script type="text/javascript" src="script.js"></script>	
-    </body>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  </link>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="container1" class="container1">
+    <canvas id="canvas" width="500" height="500">Go Gators!</canvas></div>
+  <div id="out"></div>
+
+  <div id="container2" class="container2">
+    <button id="returnbutton" class="return-button" type="button" onclick="goBack()">Return</button>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
 </html>
 <!-- partial -->
-  <script  src="./script.js"></script>
+  <script src='https://hammerjs.github.io/dist/hammer.min.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>
