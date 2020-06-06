@@ -123,3 +123,7 @@ function changeColorOrange(){
 function changeColorBlue(){
   strokeStyle = "#0021A5";
 }
+
+function goBack() {
+  window.history.back();
+}
