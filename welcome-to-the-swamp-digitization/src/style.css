@@ -82,6 +82,7 @@ img.nolink {
 }
 
 a.pagelink {
+  font-family: 'Nunito Sans', sans-serif;
   width: 100%;
   display: inline-block;
   text-align: center;
